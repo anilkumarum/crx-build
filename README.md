@@ -56,4 +56,4 @@ esbuild-config (optional).
 
 # License
 
-stack-trace is licensed under the MIT license.
+crx-build is licensed under the MIT license.
