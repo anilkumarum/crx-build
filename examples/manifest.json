@@ -1,0 +1,81 @@
+{
+	"manifest_version": 3,
+
+	"name": "tabFlow - tab groups tree",
+	"description": "Tab groups manager in tree style. Never lose tabgroups and its context. successor of tabs outliner with tabgroups & more.",
+
+	"version": "1.1.3",
+
+	"icons": { "128": "icon_128.png", "48": "icon_48.png", "16": "icon.png" },
+
+	"action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup/index.html"
+	},
+
+	"options_page": "options/options.html",
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"all_frames": true,
+			"js": ["contents/log.js"],
+			"css": ["contents/style.css"],
+			"run_at": "document_end"
+		},
+		{
+			"matches": ["<all_urls>"],
+			"all_frames": true,
+			"js": ["contents/log2.js"],
+			"css": ["contents/style2.css"],
+			"run_at": "document_end"
+		}
+	],
+
+	"background": {
+		"service_worker": "background/background.js",
+		"type": "module"
+	},
+
+	"commands": {
+		"_execute_action": {
+			"suggested_key": {
+				"default": "Alt+W",
+				"windows": "Alt+W",
+				"mac": "Alt+W",
+				"linux": "Alt+W"
+			}
+		},
+
+		"createTabGroup": {
+			"suggested_key": {
+				"default": "Alt + G"
+			},
+			"description": "create tab group"
+		},
+
+		"newTabRight": {
+			"suggested_key": {
+				"default": "Alt + R"
+			},
+			"description": "New tab to the right"
+		},
+
+		"jumpBtwGroups": {
+			"suggested_key": {
+				"default": "Ctrl + Q"
+			},
+			"description": "jump between tab groups"
+		}
+	},
+
+	"externally_connectable": {
+		"matches": ["https://account.brahmastra.app/*"]
+	},
+
+	"web_accessible_resources": [{ "resources": ["client.js", "scripts/js/data.js"], "matches": ["<all_urls>"] }],
+
+	"permissions": ["tabs", "tabGroups", "contextMenus", "storage"],
+
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiiiSmJwhJC7qTvcRLtU78Xhj7xNsX4wlmRsLTZf5E80UI/HWrJzGDi1L2t0fnfFoV0CrRikzvJa/JIzFRrE0NHduYIQctSqVPoyZxJ39m9fgxF2EOrToq5bmNfbQu3ii+JTClvz+pmfXw1jEkQOurFDzz+25FmCetKMgHfTrA2jbQArrXNYYB2OPsYP32PqvF1zimmhwQp0IBQQpDI7v+JVx0DyptLa3ow8TDDfqwHJuAe2xhGMIiGkvpLzA7UIdoGMSblCacIBuopycoTP4k3NBYIiglwMSG5cxc7/BCtYNlbciEF6O+6igChu7GqDvwwk8EBYX9Zo083G9PVAbCQIDAQAB"
+}

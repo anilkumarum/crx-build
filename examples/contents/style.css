@@ -1,0 +1,28 @@
+body {
+	font-family: BlinkMacSystemFont, SegoeUI, Roboto, Ubuntu, Helvetica, Arial, sans-serif;
+	font-size: 85%;
+	text-rendering: optimizeSpeed;
+	background-color: var(--bg-light);
+	color: var(--txt-light);
+}
+i {
+	cursor: pointer;
+}
+.tabHead {
+	height: 2em;
+	min-width: 12rem;
+}
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+	background-color: var(--input-light);
+	color: var(--txt-light);
+	border: var(--border);
+	border-radius: 5px;
+	padding: 5px;
+	margin: 4px0;
+}
+label {
+	margin-left: 3px;
+}

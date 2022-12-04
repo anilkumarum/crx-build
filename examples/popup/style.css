@@ -1,0 +1,15 @@
+body {
+	font-family: BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica, Arial, sans-serif;
+	font-size: 85%;
+	text-rendering: optimizeSpeed;
+	background-color: var(--bg-light);
+	color: var(--txt-light);
+}
+
+i {
+	cursor: pointer;
+}
+.tabHead {
+	height: 2em;
+	min-width: 12rem;
+}

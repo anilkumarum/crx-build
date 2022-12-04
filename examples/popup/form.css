@@ -1,0 +1,14 @@
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+	background-color: var(--input-light);
+	color: var(--txt-light);
+	border: var(--border);
+	border-radius: 5px;
+	padding: 5px;
+	margin: 4px 0;
+}
+label {
+	margin-left: 3px;
+}

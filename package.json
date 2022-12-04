@@ -1,0 +1,36 @@
+{
+	"name": "crx-build",
+	"version": "0.0.1",
+	"description": "Minify and bundle your whole chrome extension in one command",
+	"license": "MIT",
+	"author": {
+		"name": "Anil Kumar"
+	},
+	"main": "main.js",
+	"type": "module",
+	"exports": "./main.js",
+	"engines": {
+		"node": ">=16.14"
+	},
+	"repository": "anilkumarum/crx-build",
+	"bugs": {
+		"url": "https://github.com/anilkumarum/crx-build/issues"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "node --watch main.js"
+	},
+	"bin": {
+		"crx-build": "bin/cli.js"
+	},
+	"keywords": [
+		"crx-build",
+		"chrome-extension",
+		"extension",
+		"build-tools"
+	],
+	"dependencies": {
+		"esbuild": "^0.15.16",
+		"htmlparser2": "^8.0.1"
+	}
+}
